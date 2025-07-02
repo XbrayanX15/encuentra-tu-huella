@@ -1,10 +1,10 @@
 {
+  "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "./setup-railway.sh"
+    "builder": "NIXPACKS"
   },
   "deploy": {
-    "healthcheckPath": "/pages/",
-    "startCommand": "php -S 0.0.0.0:$PORT -t ."
+    "startCommand": "php -S 0.0.0.0:$PORT -t .",
+    "healthcheckPath": "/pages/"
   }
 }

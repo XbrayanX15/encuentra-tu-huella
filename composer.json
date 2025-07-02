@@ -1,11 +1,11 @@
 {
-    "name": "tu-usuario/encuentra-tu-huella",
+    "name": "xbrayanx15/encuentra-tu-huella",
     "description": "Plataforma web para encontrar mascotas perdidas en México",
     "type": "project",
     "keywords": ["mascotas", "perros", "perdidos", "encontrados", "méxico"],
     "license": "MIT",
     "require": {
-        "php": ">=8.0",
+        "php": "^8.0",
         "ext-pdo": "*",
         "ext-pgsql": "*",
         "ext-gd": "*",
