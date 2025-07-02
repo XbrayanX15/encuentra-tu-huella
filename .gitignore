@@ -1,0 +1,38 @@
+# Archivos de configuración sensibles
+.env
+.env.local
+config/database.php
+
+# Archivos de desarrollo local
+config/config.local.php
+
+# Logs
+logs/*.log
+*.log
+
+# Archivos temporales
+temp/
+tmp/
+
+# Uploads (opcional - depende si quieres subir las imágenes)
+uploads/*
+!uploads/.gitkeep
+
+# Respaldos de base de datos
+database_export/
+*.sql
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Composer (si usas composer)
+vendor/
+composer.lock

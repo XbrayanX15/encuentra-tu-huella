@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuentra Tu Huella - Panel Local</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2><i class="bi bi-house-heart me-2"></i>Encuentra Tu Huella</h2>
+                        <p class="mb-0">Panel de Desarrollo Local</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="d-grid">
+                                    <a href="pages/index.php" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-house me-2"></i>
+                                        Página Principal
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-grid">
+                                    <a href="test_connection.php" class="btn btn-info btn-lg">
+                                        <i class="bi bi-database-check me-2"></i>
+                                        Test de Conexión
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h5 class="mb-3"><i class="bi bi-list-ul me-2"></i>Páginas Disponibles:</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/index.php" class="text-decoration-none">Inicio</a>
+                                        <span class="badge bg-success rounded-pill">✓</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/buscar.php" class="text-decoration-none">Buscar</a>
+                                        <span class="badge bg-warning rounded-pill">?</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/perdido.php" class="text-decoration-none">Perdidos</a>
+                                        <span class="badge bg-success rounded-pill">✓</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/encontrado.php" class="text-decoration-none">Encontrados</a>
+                                        <span class="badge bg-success rounded-pill">✓</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/login.php" class="text-decoration-none">Login</a>
+                                        <span class="badge bg-warning rounded-pill">?</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/register.php" class="text-decoration-none">Registro</a>
+                                        <span class="badge bg-warning rounded-pill">?</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/perfil.php" class="text-decoration-none">Perfil</a>
+                                        <span class="badge bg-success rounded-pill">✓</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="pages/dashboard.php" class="text-decoration-none">Dashboard</a>
+                                        <span class="badge bg-warning rounded-pill">?</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="alert alert-info">
+                            <h6><i class="bi bi-info-circle me-2"></i>Estado del Sistema:</h6>
+                            <ul class="mb-0">
+                                <li>✅ Base de datos conectada (PostgreSQL)</li>
+                                <li>✅ Funciones principales cargadas</li>
+                                <li>✅ Directorios de uploads creados</li>
+                                <li>✅ CSS y JS incluidos</li>
+                                <li>⚠️ Algunas páginas necesitan login</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="alert alert-warning">
+                            <h6><i class="bi bi-exclamation-triangle me-2"></i>Instrucciones:</h6>
+                            <ol class="mb-0">
+                                <li>Ejecuta <code>start_server.bat</code> o usa <code>php -S localhost:8000</code></li>
+                                <li>Accede a <code>http://localhost:8000</code></li>
+                                <li>Para ver la página principal: <code>http://localhost:8000/pages/index.php</code></li>
+                                <li>Para test de conexión: <code>http://localhost:8000/test_connection.php</code></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

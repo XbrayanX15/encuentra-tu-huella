@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "./setup-railway.sh"
+  },
+  "deploy": {
+    "healthcheckPath": "/pages/",
+    "startCommand": "php -S 0.0.0.0:$PORT -t ."
+  }
+}
