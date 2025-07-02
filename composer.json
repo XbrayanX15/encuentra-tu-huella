@@ -2,28 +2,12 @@
     "name": "xbrayanx15/encuentra-tu-huella",
     "description": "Plataforma web para encontrar mascotas perdidas en México",
     "type": "project",
-    "keywords": ["mascotas", "perros", "perdidos", "encontrados", "méxico"],
-    "license": "MIT",
     "require": {
-        "php": "^8.0",
-        "ext-pdo": "*",
-        "ext-pgsql": "*",
-        "ext-gd": "*",
-        "ext-mbstring": "*",
-        "ext-json": "*"
+        "php": ">=8.0"
     },
     "scripts": {
         "post-install-cmd": [
-            "echo 'Instalación completada'"
-        ],
-        "post-update-cmd": [
-            "echo 'Actualización completada'"
+            "echo 'Setup completed'"
         ]
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    }
 }

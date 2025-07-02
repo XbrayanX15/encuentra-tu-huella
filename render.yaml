@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: encuentra-tu-huella
+    runtime: php
+    buildCommand: echo "No build needed"
+    startCommand: php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: PHP_VERSION
+        value: "8.1"
