@@ -1,20 +1,12 @@
 FROM php:8.1-cli
 
-# Instalar dependencias del sistema
+# Instalar dependencias del sistema para PostgreSQL
 RUN apt-get update && apt-get install -y \
     libpq-dev \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libzip-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Instalar extensiones PHP una por una para mejor debugging
-RUN docker-php-ext-install pdo
-RUN docker-php-ext-install pdo_pgsql  
-RUN docker-php-ext-install mbstring
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-RUN docker-php-ext-install gd
+# Instalar solo las extensiones necesarias
+RUN docker-php-ext-install pdo pdo_pgsql
 
 # Establecer directorio de trabajo
 WORKDIR /app
