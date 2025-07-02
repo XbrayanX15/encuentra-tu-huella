@@ -3,14 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encuentra Tu Huella</title>
-    <script>
-        // Redirigir automáticamente a la página principal
-        window.location.href = '/pages/';
-    </script>
+    <title>Encuentra Tu Huella - Redirigiendo...</title>
+    <meta http-equiv="refresh" content="0;url=pages/">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+        }
+        .loading {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirigiendo a <a href="/pages/">Encuentra Tu Huella</a>...</p>
+    <h1>🐕 Encuentra Tu Huella</h1>
+    <div class="spinner"></div>
+    <div class="loading">Redirigiendo a la aplicación...</div>
+    <p>Si no eres redirigido automáticamente, <a href="pages/">haz click aquí</a></p>
+    
+    <script>
+        // Redirección automática con JavaScript como respaldo
+        setTimeout(function() {
+            window.location.href = 'pages/';
+        }, 1000);
+    </script>
 </body>
 </html>
     <div class="container py-5">

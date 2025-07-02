@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^$ pages/ [R=301,L]
+RewriteRule ^([^/]+)/$ pages/$1.php [L]
+RewriteRule ^([^/]+)$ pages/$1.php [L]
