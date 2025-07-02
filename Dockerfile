@@ -4,13 +4,17 @@ FROM php:8.1-cli
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     libpng-dev \
-    libjpeg62-turbo-dev \
+    libjpeg-dev \
     libfreetype6-dev \
+    libzip-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Configurar e instalar extensiones PHP
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd pdo pdo_pgsql mbstring
+# Instalar extensiones PHP una por una para mejor debugging
+RUN docker-php-ext-install pdo
+RUN docker-php-ext-install pdo_pgsql  
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+RUN docker-php-ext-install gd
 
 # Establecer directorio de trabajo
 WORKDIR /app
