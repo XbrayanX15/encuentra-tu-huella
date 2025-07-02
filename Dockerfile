@@ -16,7 +16,9 @@ COPY . .
 
 # Crear directorios necesarios con permisos
 RUN mkdir -p uploads logs \
-    && chmod 755 uploads logs
+    && chmod 755 uploads logs \
+    && ls -la config/ \
+    && ls -la includes/
 
 # Exponer puerto
 EXPOSE 8080
