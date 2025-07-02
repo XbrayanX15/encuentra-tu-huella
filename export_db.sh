@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Script para exportar la base de datos PostgreSQL
+# Desarrollado por: David
 # Ejecutar en tu computadora local antes del deploy
 
 echo "=== Exportando Base de Datos PostgreSQL ==="

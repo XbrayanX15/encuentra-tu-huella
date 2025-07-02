@@ -1,6 +1,7 @@
 <?php
 // =====================================================
 // Encuentra Tu Huella - Configuración de Base de Datos PRODUCCIÓN
+// Desarrollado por: David
 // =====================================================
 
 // Configuración de conexión usando variables de entorno
