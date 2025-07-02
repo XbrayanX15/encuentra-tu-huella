@@ -1,12 +1,15 @@
-FROM php:8.1-cli-alpine
+FROM php:8.1-cli
 
-# Instalar dependencias y extensiones de PHP
-RUN apk add --no-cache \
-    postgresql-dev \
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
     libpng-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configurar e instalar extensiones PHP
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd pdo pdo_pgsql mbstring
 
 # Establecer directorio de trabajo
@@ -17,8 +20,7 @@ COPY . .
 
 # Crear directorios necesarios con permisos
 RUN mkdir -p uploads logs \
-    && chmod 755 uploads logs \
-    && chown -R www-data:www-data uploads logs
+    && chmod 755 uploads logs
 
 # Exponer puerto
 EXPOSE 8080
