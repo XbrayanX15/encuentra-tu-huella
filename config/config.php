@@ -6,11 +6,11 @@
 // Configuración del sitio
 define('SITE_NAME', 'Encuentra Tu Huella');
 define('SITE_DESCRIPTION', 'Sistema para encontrar mascotas perdidas en la Ciudad de México');
-define('SITE_URL', 'http://localhost:8000'); // Cambiar por la URL real
+define('SITE_URL', $_ENV['SITE_URL'] ?? getenv('SITE_URL') ?: 'http://localhost:8000'); // Cambiar por la URL real
 define('SITE_EMAIL', 'contacto@encuentratuhuella.com');
 
 // Configuración de Google Maps
-define('GOOGLE_MAPS_API_KEY', 'TU_API_KEY_AQUI'); // Reemplazar con tu API Key real
+define('GOOGLE_MAPS_API_KEY', $_ENV['GOOGLE_MAPS_API_KEY'] ?? getenv('GOOGLE_MAPS_API_KEY') ?: 'TU_API_KEY_AQUI'); // Reemplazar con tu API Key real
 
 // Configuración de archivos
 define('UPLOAD_PATH', __DIR__ . '/../images/uploads/');
